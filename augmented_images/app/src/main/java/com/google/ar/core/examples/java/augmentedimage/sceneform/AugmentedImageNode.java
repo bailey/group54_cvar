@@ -53,7 +53,7 @@ public class AugmentedImageNode extends AnchorNode {
 
         Node node = new Node();
 
-        Pose pose = Pose.makeTranslation(0.f, 0.0f, 0.0f);
+        Pose pose = Pose.makeTranslation(0.0f, 0.0f, 0.25f);
 
         node.setParent(this);
         //float tempX = (float) (pose.tx()-0.5);

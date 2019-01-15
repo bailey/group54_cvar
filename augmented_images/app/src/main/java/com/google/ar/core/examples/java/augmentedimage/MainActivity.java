@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
             if (augmentedImage.getTrackingState() == TrackingState.TRACKING) {
                 // Check camera image matches our reference image
                 if (augmentedImage.getName().equals("tj")) {
-                    AugmentedImageNode node = new AugmentedImageNode(this, "model.sfb");
+                    AugmentedImageNode node = new AugmentedImageNode(this, "Pin.sfb");
                     node.setImage(augmentedImage);
                     arSceneView.getScene().addChild(node);
                 }
