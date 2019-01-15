@@ -40,6 +40,12 @@ sceneform.asset('sampledata/model.gltf',
         'sampledata/model.sfa',
         'src/main/assets/model')
 
+sceneform.asset('sampledata/model1.obj',
+        'default',
+        'sampledata/model1.sfa',
+        'src/main/assets/model1')
+
+
 sceneform.asset('sampledata/Pin.obj',
         'default',
         'sampledata/Pin.sfa',
