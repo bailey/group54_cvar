@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
         for (AugmentedImage augmentedImage : updatedAugmentedImages) {
             if (augmentedImage.getTrackingState() == TrackingState.TRACKING) {
                 // Check camera image matches our reference image
-                if (augmentedImage.getName().equals("delorean")) {
+                if (augmentedImage.getName().equals("tj")) {
                     AugmentedImageNode node = new AugmentedImageNode(this, "model.sfb");
                     node.setImage(augmentedImage);
                     arSceneView.getScene().addChild(node);
@@ -195,14 +195,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         augmentedImageDatabase = new AugmentedImageDatabase(session);
-        augmentedImageDatabase.addImage("delorean", augmentedImageBitmap);
+        augmentedImageDatabase.addImage("tj", augmentedImageBitmap);
 
         config.setAugmentedImageDatabase(augmentedImageDatabase);
         return true;
     }
 
     private Bitmap loadAugmentedImage() {
-        try (InputStream is = getAssets().open("delorean.jpg")) {
+        try (InputStream is = getAssets().open("tj.JPG")) {
             return BitmapFactory.decodeStream(is);
         } catch (IOException e) {
             Log.e(TAG, "IO exception loading augmented image bitmap.", e);

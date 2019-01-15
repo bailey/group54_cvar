@@ -53,9 +53,10 @@ public class AugmentedImageNode extends AnchorNode {
 
         Node node = new Node();
 
-        Pose pose = Pose.makeTranslation(0.0f, 0.0f, 0.25f);
+        Pose pose = Pose.makeTranslation(0.f, 0.0f, 0.0f);
 
         node.setParent(this);
+        //float tempX = (float) (pose.tx()-0.5);
         node.setLocalPosition(new Vector3(pose.tx(), pose.ty(), pose.tz()));
         node.setLocalRotation(new Quaternion(pose.qx(), pose.qy(), pose.qz(), pose.qw()));
         node.setRenderable(modelFuture.getNow(null));
